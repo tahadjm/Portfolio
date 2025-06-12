@@ -14,7 +14,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 mt:20"
+      className="h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -56,12 +56,12 @@ export function Hero() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com/tahadjm/" aria-label="GitHub">
+              <a href="#" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://dz.linkedin.com/in/taha-djemili-595540308" aria-label="LinkedIn">
+              <a href="#" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6" />
               </a>
             </Button>
