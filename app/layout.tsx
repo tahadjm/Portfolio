@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     description: "Portfolio of Djemili Taha Abdelwadoud, Full Stack Developer and Computer Science Student",
     type: "website",
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
