@@ -56,12 +56,12 @@ export function Hero() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="#" aria-label="GitHub">
+              <a href="https://github.com/tahadjm/" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="#" aria-label="LinkedIn">
+              <a href="https://dz.linkedin.com/in/taha-djemili-595540308" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6" />
               </a>
             </Button>
