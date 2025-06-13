@@ -62,7 +62,7 @@ export function Hero() {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com/taha.djm" aria-label="GitHub">
+              <a href="https://github.com/tahadjm" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
