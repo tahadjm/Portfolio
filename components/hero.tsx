@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react"
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -46,6 +46,12 @@ export function Hero() {
             </Button>
             <Button variant="outline" size="lg" onClick={() => scrollToSection("contact")} className="w-full sm:w-auto">
               Get In Touch
+            </Button>
+            <Button variant="secondary" size="lg" className="w-full sm:w-auto" asChild>
+              <a href="/resume.pdf" download="Djemili_Taha_Resume.pdf">
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </a>
             </Button>
           </div>
 
