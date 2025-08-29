@@ -1,10 +1,41 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github, Calendar, Users } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github, Calendar, Users } from "lucide-react";
 
 export function Projects() {
   const projects = [
+    {
+      title: "Full-Stack Developer",
+      company: "Capfun Seraidi Adventure Park",
+      period: "Aug 2025 - Present",
+      description:
+        "Designed and developed a full-stack online booking platform for outdoor activities, providing real-time availability, secure payments, and an intuitive user experience across web and mobile devices.",
+      achievements: [
+        "Reduced manual booking processes by 80% through digital workflows",
+        "Built 150+ responsive UI components with Next.js and Tailwind CSS",
+        "Developed 50+ RESTful API endpoints with NestJS and Prisma ORM",
+        "Integrated secure online payments using Chargily API",
+        "Created admin dashboards and tools to streamline park operations",
+      ],
+      technologies: [
+        "NestJS",
+        "Prisma",
+        "PostgreSQL",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Chargily API",
+      ],
+      type: "Professional Project",
+      liveDemo: "https://capfun-seraidi.vercel.app/",
+    },
     {
       title: "Adventure Park Booking Platform",
       company: "Forest Adventure Annaba",
@@ -18,8 +49,17 @@ export function Projects() {
         "Implemented secure payment integration",
         "Created intuitive admin tools for operational efficiency",
       ],
-      technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "ChargilyAPI", "Tailwind CSS"],
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "ChargilyAPI",
+        "Tailwind CSS",
+      ],
       type: "Professional Project",
+      liveDemo: "https://forest-adventure-dusky.vercel.app/",
     },
     {
       title: "Ridesharing Platform",
@@ -36,14 +76,19 @@ export function Projects() {
       technologies: ["HTML", "CSS", "JavaScript", "PHP"],
       type: "Academic Project",
     },
-  ]
+  ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section
+      id="projects"
+      className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Featured Projects</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+            Featured Projects
+          </h2>
 
           <div className="space-y-8">
             {projects.map((project, index) => (
@@ -67,23 +112,35 @@ export function Projects() {
                       {project.period}
                     </div>
                   </div>
-                  <Badge variant="outline" className="w-fit bg-primary/10 border-primary/20">
+                  <Badge
+                    variant="outline"
+                    className="w-fit bg-primary/10 border-primary/20"
+                  >
                     {project.type}
                   </Badge>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
-                  <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
 
                   <div>
                     <h4 className="font-semibold mb-3">Key Achievements:</h4>
                     <ul className="space-y-2">
-                      {project.achievements.map((achievement, achievementIndex) => (
-                        <li key={achievementIndex} className="flex items-start gap-2">
-                          <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                          <span className="text-muted-foreground">{achievement}</span>
-                        </li>
-                      ))}
+                      {project.achievements.map(
+                        (achievement, achievementIndex) => (
+                          <li
+                            key={achievementIndex}
+                            className="flex items-start gap-2"
+                          >
+                            <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-muted-foreground">
+                              {achievement}
+                            </span>
+                          </li>
+                        )
+                      )}
                     </ul>
                   </div>
 
@@ -103,10 +160,18 @@ export function Projects() {
                       <Github className="h-4 w-4 mr-2" />
                       View Code
                     </Button>
-                    <Button variant="outline" size="sm">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Live Demo
-                    </Button>
+                    {project.liveDemo && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" size="sm">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -115,5 +180,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,15 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { ZoomIn, ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ZoomIn, ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 export function Pictures() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const projectGalleries = [
     {
@@ -17,7 +23,15 @@ export function Pictures() {
       description:
         "A robust full-stack web application designed for adventure park management. Features include a comprehensive booking system with multi-role authentication (admin, staff, customer), real-time analytics dashboards, and seamless payment processing via ChargilyAPI. Administrators can manage park schedules, pricing, and availability with advanced time slot controls. The platform supports Arabic localization, secure payment methods (QR codes, bank cards, CIB cards), and provides a modern, responsive UI built with Next.js and TailwindCSS. Over $130K+ in transactions processed, with detailed metrics and user management tools.",
       category: "Full Stack Web Application",
-      technologies: ["Next.js", "Express.js", "TypeScript", "MongoDB", "ChargilyAPI", "TailwindCSS"],
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "ChargilyAPI",
+        "TailwindCSS",
+      ],
       images: [
         {
           src: "/images/dashboard-overview.png",
@@ -50,46 +64,16 @@ export function Pictures() {
       ],
       links: {
         github: "#",
-        live: "#",
+        live: "https://forest-adventure-dusky.vercel.app/",
       },
     },
-    // {
-    //   title: "Ridesharing Platform",
-    //   description: "Web platform facilitating ridesharing between users with trip management and cost optimization",
-    //   category: "Academic Project",
-    //   technologies: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
-    //   images: [
-    //     {
-    //       src: "/placeholder.svg?height=400&width=600",
-    //       alt: "Ridesharing Homepage",
-    //       title: "Platform Homepage",
-    //       description:
-    //         "Clean and intuitive interface for users to find and offer rides, featuring trip search functionality and user-friendly navigation",
-    //     },
-    //     {
-    //       src: "/placeholder.svg?height=400&width=600",
-    //       alt: "Trip Search Engine",
-    //       title: "Advanced Trip Search",
-    //       description:
-    //         "Powerful search engine allowing users to find rides based on location, date, time, and preferences with real-time availability",
-    //     },
-    //     {
-    //       src: "/placeholder.svg?height=400&width=600",
-    //       alt: "User Profile Management",
-    //       title: "User Management System",
-    //       description:
-    //         "Comprehensive profile management for both drivers and passengers, including trip history, ratings, and verification features",
-    //     },
-    //   ],
-    //   links: {
-    //     github: "#",
-    //     live: "#",
-    //   },
-    // },
-  ]
+  ];
 
   return (
-    <section id="pictures" className="py-20 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+    <section
+      id="pictures"
+      className="py-20 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-dot-pattern opacity-5"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -99,7 +83,8 @@ export function Pictures() {
             </h2>
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Visual showcase of my projects with detailed screenshots and technical implementations
+              Visual showcase of my projects with detailed screenshots and
+              technical implementations
             </p>
           </div>
 
@@ -110,12 +95,20 @@ export function Pictures() {
                   <Badge variant="outline" className="mb-4 text-sm px-4 py-2">
                     {project.category}
                   </Badge>
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-4">{project.title}</h3>
-                  <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">{project.description}</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
+                    {project.description}
+                  </p>
 
                   <div className="flex flex-wrap justify-center gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs">
+                      <Badge
+                        key={techIndex}
+                        variant="secondary"
+                        className="text-xs"
+                      >
                         {tech}
                       </Badge>
                     ))}
@@ -155,7 +148,11 @@ export function Pictures() {
                           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <Dialog>
                               <DialogTrigger asChild>
-                                <Button variant="secondary" size="sm" className="backdrop-blur-sm">
+                                <Button
+                                  variant="secondary"
+                                  size="sm"
+                                  className="backdrop-blur-sm"
+                                >
                                   <ZoomIn className="h-4 w-4 mr-2" />
                                   View Full Size
                                 </Button>
@@ -172,7 +169,9 @@ export function Pictures() {
                                     height={600}
                                     className="w-full h-auto rounded-lg"
                                   />
-                                  <p className="text-muted-foreground">{image.description}</p>
+                                  <p className="text-muted-foreground">
+                                    {image.description}
+                                  </p>
                                 </div>
                               </DialogContent>
                             </Dialog>
@@ -182,7 +181,9 @@ export function Pictures() {
                           <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
                             {image.title}
                           </h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">{image.description}</p>
+                          <p className="text-muted-foreground text-sm leading-relaxed">
+                            {image.description}
+                          </p>
                         </div>
                       </CardContent>
                     </Card>
@@ -194,5 +195,5 @@ export function Pictures() {
         </div>
       </div>
     </section>
-  )
+  );
 }
