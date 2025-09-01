@@ -63,7 +63,37 @@ export function Pictures() {
         },
       ],
       links: {
-        github: "#",
+        live: "https://forest-adventure-dusky.vercel.app/",
+      },
+    },
+    {
+      title: "Capfun Seraidi Booking Platform",
+      description:
+        "A robust full-stack web application designed for capfun seraidi management. Features include a comprehensive booking system with multi-role authentication (admin, staff, customer), real-time analytics dashboards, and seamless payment processing via ChargilyAPI. Administrators can manage sites schedules, pricing, and availability with advanced time slot controls. The platform supports Arabic localization, secure payment methods (QR codes, bank cards, CIB cards), and provides a modern, responsive UI built with Next.js and TailwindCSS. Over $130K+ in transactions processed, with detailed metrics and user management tools.",
+      category: "Full Stack Web Application",
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "ChargilyAPI",
+        "TailwindCSS",
+      ],
+      images: [
+        {
+          src: "/images/capfun.png",
+          alt: "Hero Section",
+          title: "Capfun Seraidi Booking Platform",
+        },
+        {
+          src: "/images/capfun-2.png",
+          alt: "Activities showcase",
+          title: "showcase of different Activities in the platform",
+          description: "https://capfun-seraidi.vercel.app/",
+        },
+      ],
+      links: {
         live: "https://forest-adventure-dusky.vercel.app/",
       },
     },
@@ -115,12 +145,6 @@ export function Pictures() {
                   </div>
 
                   <div className="flex justify-center gap-4 mb-8">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.links.github}>
-                        <Github className="h-4 w-4 mr-2" />
-                        View Code
-                      </a>
-                    </Button>
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.links.live}>
                         <ExternalLink className="h-4 w-4 mr-2" />
