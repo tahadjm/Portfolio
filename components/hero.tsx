@@ -33,7 +33,7 @@ export function Hero() {
             <div className="h-1 w-24 bg-gradient-to-r from-primary to-primary/50 mx-auto mb-6 rounded-full"></div>
           </div>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Full Stack Developer & Computer Science Student
+            Software Engineer & Computer Science Student
           </p>
           <p className="text-lg text-muted-foreground mb-12 max-w-3xl mx-auto">
             Passionate about creating innovative web applications with modern technologies. Specializing in Next.js,

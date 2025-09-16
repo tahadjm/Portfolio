@@ -23,6 +23,7 @@ export function Projects() {
         "Developed 50+ RESTful API endpoints with NestJS and Prisma ORM",
         "Integrated secure online payments using Chargily API",
         "Created admin dashboards and tools to streamline park operations",
+        "Deplyed the application using amazon web service (aws lambda, s3)",
       ],
       technologies: [
         "NestJS",
@@ -48,6 +49,7 @@ export function Projects() {
         "Developed 50+ RESTful API endpoints",
         "Implemented secure payment integration",
         "Created intuitive admin tools for operational efficiency",
+        "Deplyed the application using amazon web service (aws lambda, s3)",
       ],
       technologies: [
         "Next.js",

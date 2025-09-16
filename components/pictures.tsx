@@ -19,6 +19,54 @@ export function Pictures() {
 
   const projectGalleries = [
     {
+      title: "Capfun Seraidi Booking Platform",
+      description:
+        "A robust full-stack web application designed for capfun seraidi management. Features include a comprehensive booking system with multi-role authentication (admin, staff, customer), real-time analytics dashboards, and seamless payment processing via ChargilyAPI. Administrators can manage sites schedules, pricing, and availability with advanced time slot controls. The platform supports Arabic localization, secure payment methods (QR codes, bank cards, CIB cards), and provides a modern, responsive UI built with Next.js and TailwindCSS. Over $130K+ in transactions processed, with detailed metrics and user management tools.",
+      category: "Full Stack Web Application",
+      technologies: [
+        "Next.js",
+        "Nest.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma",
+        "ChargilyAPI",
+        "TailwindCSS",
+      ],
+      images: [
+        {
+          src: "/images/capfun.png",
+          alt: "Capfun Annaba hero section showcasing adventure activities",
+          title: "Hero Section",
+          description:
+            "The main hero section that highlights the adventure park’s unique experiences with a bold and engaging design.",
+        },
+        {
+          src: "/images/landing-page.png",
+          alt: "Landing page with featured activities and booking options",
+          title: "Landing Page",
+          description:
+            "The landing page introduces visitors to the platform with featured activities, quick navigation, and booking options.",
+        },
+        {
+          src: "/images/about-page.png",
+          alt: "About page providing details about the park and its mission",
+          title: "About Page",
+          description:
+            "This page shares the story, mission, and values of the park, helping visitors connect with the brand and its purpose.",
+        },
+        {
+          src: "/images/activity-page-2.png",
+          alt: "Activity page showing available courses and time slots",
+          title: "Activity Page",
+          description:
+            "The activity page lists all available courses and adventures, complete with schedules, pricing, and reservation options.",
+        },
+      ],
+      links: {
+        live: "https://capfun-seraidi.vercel.app/",
+      },
+    },
+    {
       title: "Adventure Park Booking Platform",
       description:
         "A robust full-stack web application designed for adventure park management. Features include a comprehensive booking system with multi-role authentication (admin, staff, customer), real-time analytics dashboards, and seamless payment processing via ChargilyAPI. Administrators can manage park schedules, pricing, and availability with advanced time slot controls. The platform supports Arabic localization, secure payment methods (QR codes, bank cards, CIB cards), and provides a modern, responsive UI built with Next.js and TailwindCSS. Over $130K+ in transactions processed, with detailed metrics and user management tools.",
@@ -60,37 +108,6 @@ export function Pictures() {
           title: "Home Page",
           description:
             "Home page that displays all parks in card format, with information about security, about us, and a reusable hero section featuring video content.",
-        },
-      ],
-      links: {
-        live: "https://forest-adventure-dusky.vercel.app/",
-      },
-    },
-    {
-      title: "Capfun Seraidi Booking Platform",
-      description:
-        "A robust full-stack web application designed for capfun seraidi management. Features include a comprehensive booking system with multi-role authentication (admin, staff, customer), real-time analytics dashboards, and seamless payment processing via ChargilyAPI. Administrators can manage sites schedules, pricing, and availability with advanced time slot controls. The platform supports Arabic localization, secure payment methods (QR codes, bank cards, CIB cards), and provides a modern, responsive UI built with Next.js and TailwindCSS. Over $130K+ in transactions processed, with detailed metrics and user management tools.",
-      category: "Full Stack Web Application",
-      technologies: [
-        "Next.js",
-        "Nest.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "ChargilyAPI",
-        "TailwindCSS",
-      ],
-      images: [
-        {
-          src: "/images/capfun.png",
-          alt: "Hero Section",
-          title: "Capfun Seraidi Booking Platform",
-        },
-        {
-          src: "/images/capfun-2.png",
-          alt: "Activities showcase",
-          title: "showcase of different Activities in the platform",
-          description: "https://capfun-seraidi.vercel.app/",
         },
       ],
       links: {
