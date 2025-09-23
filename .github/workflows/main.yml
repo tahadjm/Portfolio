@@ -1,0 +1,31 @@
+name: CI # workflow name (can be anything)
+
+on: # <--- tells GitHub when to run
+  push: # run when you push code
+    branches:
+      - main # only on main branch
+  pull_request: # run on PRs targeting main
+    branches:
+      - main
+  workflow_dispatch: # optional: run manually
+
+jobs: # what actions to perform
+  build:
+    runs-on: ubuntu-latest # virtual machine
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # or your version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
